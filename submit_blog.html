@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs</title>
+  <style>
+    /* Reset default margin and padding */
+    body, h2, h3, form, input, textarea, button, p, hr {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* Body styling matching signup/login pages */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #1a1a1a, #333, #1a1a1a);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+    
+    .container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    /* Box styling similar to the login form */
+    .form-container, .blogs-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 400px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .form-container h3, .blogs-container h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    /* Input and textarea styling */
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      font-size: 14px;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+    }
+    
+    textarea {
+      resize: none;
+      height: 150px;
+    }
+    
+    /* Button styling similar to signup/login */
+    button {
+      width: 100%;
+      background-color: #FF758F;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #A4133C;
+    }
+    
+    /* Blog display box styling */
+    .blog {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .blog h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    
+    .blog p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    .blog p strong {
+      color: #FF758F;
+    }
+    
+    hr {
+      border: 0;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      margin: 20px 0;
+    }
+    
+    /* Optional: Style for like and comment buttons inside blogs */
+    .like-btn, .comment-btn {
+      width: auto;
+      margin-top: 10px;
+      background-color: #FF758F;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .like-btn:hover, .comment-btn:hover {
+      background-color: #A4133C;
+    }
+    
+    .comment-box {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Blogs</h2>
+  <div class="container">
+    <!-- Blog Submission Form -->
+    <div class="form-container">
+      <h3>Submit a New Blog</h3>
+      <form action="{{ url_for('submit_blog') }}" method="POST">
+        <input type="text" name="title" placeholder="Blog Title" required>
+        <textarea name="content" placeholder="Blog Content" required></textarea>
+        <button type="submit">Submit Blog</button>
+      </form>
+    </div>
+    
+    <!-- Blogs Display -->
+    <div class="blogs-container">
+      <h3>View Blogs</h3>
+      {% if blogs %}
+        {% for blog in blogs %}
+          <div class="blog">
+            <h3>{{ blog.title }}</h3>
+            <p><strong>By {{ blog.author }}</strong> on {{ blog.created_at }}</p>
+            <p>{{ blog.content }}</p>
+            <!-- Like Button -->
+            <button class="like-btn" data-blog-id="{{ blog.id }}">
+              👍 Like ({{ blog.likes }})
+            </button>
+            <!-- Comment Section -->
+            <h4>Comments:</h4>
+            {% for comment in blog.comments %}
+              <p>{{ comment }}</p>
+            {% endfor %}
+            <textarea class="comment-box" data-blog-id="{{ blog.id }}" placeholder="Add a comment..." rows="2"></textarea>
+            <button class="comment-btn" data-blog-id="{{ blog.id }}">Submit Comment</button>
+          </div>
+          <hr>
+        {% endfor %}
+      {% else %}
+        <p>No blogs to display.</p>
+      {% endif %}
+    </div>
+  </div>
+  
+  <script>
+    // Handle Like Button Click
+    document.querySelectorAll('.like-btn').forEach(button => {
+      button.addEventListener('click', function () {
+        const blogId = this.getAttribute('data-blog-id');
+        fetch(`/like_blog/${blogId}`, {
+          method: 'POST',
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Content-Type': 'application/json',
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            this.innerText = `👍 Like (${data.likes})`;
+          } else {
+            alert(data.message);
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      });
+    });
+    
+    // Handle Comment Submission
+    document.querySelectorAll('.comment-btn').forEach(button => {
+      button.addEventListener('click', function () {
+        const blogId = this.getAttribute('data-blog-id');
+        const commentBox = document.querySelector(`.comment-box[data-blog-id="${blogId}"]`);
+        const comment = commentBox.value;
+        
+        fetch(`/comment_blog/${blogId}`, {
+          method: 'POST',
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ comment })
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            commentBox.value = ''; // Clear the comment box
+            alert('Comment added successfully!');
+            location.reload(); // Reload to show the new comment
+          } else {
+            alert(data.message);
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      });
+    });
+  </script>
+</body>
+</html>

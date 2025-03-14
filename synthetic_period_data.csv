@@ -1,0 +1,1001 @@
+Cycle Length,Period Duration,Symptoms,Stress Level,Exercise Level,Irregular Cycle
+28,6,Fatigue,Low,Low,0
+27,5,Fatigue,High,High,0
+29,5,Fatigue,Low,High,1
+31,4,Headache,High,Low,0
+27,5,None,Low,None,0
+27,5,None,High,Low,0
+31,5,Mood Swings,High,High,0
+29,5,None,Low,Low,0
+27,6,None,High,None,0
+29,4,Fatigue,Medium,Moderate,0
+27,6,Fatigue,Low,Moderate,1
+27,5,Mood Swings,Medium,Low,0
+28,7,Cramps,Low,None,0
+24,4,Mood Swings,High,Moderate,1
+24,6,Mood Swings,High,Low,0
+26,5,Headache,High,Low,1
+25,4,Headache,Low,None,0
+28,4,Mood Swings,Medium,High,0
+26,4,Mood Swings,Medium,Low,0
+25,5,Mood Swings,Low,High,0
+30,5,None,Low,High,1
+27,4,Headache,Medium,Moderate,0
+28,4,Mood Swings,Medium,High,0
+25,7,Fatigue,Medium,None,0
+26,6,Fatigue,Medium,Moderate,0
+28,5,None,Low,Moderate,0
+25,5,None,Low,Moderate,0
+28,5,Cramps,High,Low,0
+26,5,Cramps,Medium,Low,0
+27,3,Cramps,High,High,0
+26,4,None,Low,Moderate,0
+31,3,None,Low,Moderate,0
+27,5,None,High,None,0
+25,5,Fatigue,Medium,High,0
+29,4,None,Medium,None,0
+25,6,Fatigue,Medium,High,0
+28,3,Cramps,Medium,High,0
+24,3,Cramps,High,Low,0
+25,5,Cramps,High,Low,0
+28,6,Mood Swings,Low,None,0
+29,6,Mood Swings,Medium,High,0
+28,4,Headache,Medium,Moderate,0
+27,6,Headache,Medium,Low,0
+27,4,Headache,High,Moderate,1
+25,4,Mood Swings,Medium,None,0
+26,5,Mood Swings,High,Low,0
+27,5,Headache,Medium,Low,1
+30,3,Headache,Medium,High,0
+28,6,None,Low,None,0
+24,6,Headache,Medium,High,0
+28,4,None,Medium,Low,0
+27,5,Fatigue,Low,None,1
+26,5,Mood Swings,High,Low,1
+29,5,Headache,High,None,0
+30,4,Mood Swings,Medium,Low,0
+29,4,Mood Swings,High,Moderate,1
+26,4,Mood Swings,Medium,Moderate,0
+27,6,Fatigue,Low,High,0
+28,5,Cramps,Low,Moderate,1
+29,4,Headache,Medium,Low,0
+27,5,Cramps,Low,Low,0
+27,2,Cramps,Low,Moderate,0
+25,6,Cramps,Medium,High,1
+25,3,Mood Swings,Medium,Moderate,0
+29,4,None,Low,None,0
+30,3,Mood Swings,High,None,0
+27,3,Mood Swings,High,None,0
+30,6,Cramps,Medium,Moderate,0
+28,4,Mood Swings,Medium,Moderate,0
+26,5,Cramps,High,Moderate,0
+28,4,None,Low,None,0
+31,5,Headache,High,High,1
+27,5,Cramps,High,Low,0
+31,3,None,High,Moderate,1
+22,5,Headache,High,High,0
+29,4,Fatigue,Medium,Low,0
+28,3,Cramps,Medium,Low,0
+27,4,Cramps,Low,Low,0
+28,6,Fatigue,Low,High,1
+24,5,Fatigue,Low,High,0
+27,4,Cramps,Low,None,0
+28,4,Fatigue,High,High,0
+30,4,Mood Swings,Medium,High,0
+26,7,Headache,Medium,High,0
+26,5,Headache,Low,Low,0
+26,5,Headache,Low,Moderate,0
+29,6,Mood Swings,High,None,0
+28,5,Fatigue,High,Moderate,0
+26,4,None,Low,Moderate,0
+29,4,Fatigue,Medium,High,0
+28,4,Cramps,Medium,None,0
+29,4,Headache,Medium,Moderate,0
+26,5,Fatigue,Low,Moderate,0
+27,5,None,Medium,None,0
+27,5,Cramps,High,High,0
+25,4,Mood Swings,High,Moderate,1
+28,5,Mood Swings,Low,Low,0
+28,3,None,High,Moderate,0
+28,5,Cramps,Low,Low,1
+27,5,Headache,Medium,High,0
+25,5,Fatigue,Medium,Moderate,0
+27,2,Cramps,Medium,None,1
+27,7,Mood Swings,High,None,0
+26,4,None,Low,Moderate,0
+27,6,None,Medium,High,0
+28,3,Fatigue,Low,High,0
+31,5,None,Medium,None,0
+28,3,None,High,Moderate,0
+28,4,Cramps,High,High,0
+27,6,Headache,Low,None,0
+24,4,Fatigue,High,Low,1
+27,5,Cramps,High,Moderate,0
+28,5,Headache,Low,Low,1
+32,5,Cramps,Medium,Low,1
+27,5,Cramps,High,High,0
+28,5,None,Low,High,0
+27,7,Headache,High,High,0
+25,4,Fatigue,High,Moderate,1
+30,5,Fatigue,High,Low,0
+29,6,Headache,High,Moderate,0
+29,6,None,Low,High,0
+26,6,Mood Swings,Low,Low,0
+30,5,Cramps,Low,Moderate,0
+25,3,None,High,Moderate,0
+29,6,Headache,High,None,0
+32,3,Cramps,High,Moderate,0
+26,5,Fatigue,Low,High,1
+26,4,Mood Swings,High,Moderate,0
+28,4,Fatigue,Medium,Low,1
+26,5,Headache,High,Moderate,0
+24,5,Cramps,Medium,None,0
+28,5,Headache,High,Low,0
+25,6,Cramps,Low,Low,0
+28,5,None,High,None,1
+26,4,Mood Swings,Medium,High,0
+31,5,None,Medium,Low,1
+26,6,None,High,High,0
+27,3,Headache,Medium,Low,0
+29,5,Mood Swings,Medium,Low,0
+25,5,Cramps,Low,High,0
+28,4,Cramps,High,Low,0
+30,6,Fatigue,High,High,1
+24,4,Cramps,High,None,0
+28,5,Headache,Medium,High,0
+28,4,None,High,None,0
+29,5,None,High,Low,0
+25,3,None,Low,High,0
+25,3,Mood Swings,Low,Low,0
+29,6,Cramps,Low,High,0
+28,4,Headache,Medium,None,0
+28,4,Mood Swings,High,None,0
+28,2,Fatigue,Low,High,0
+26,4,Headache,Low,None,0
+28,3,Headache,Low,Low,0
+28,6,Headache,High,Low,0
+26,6,None,High,Moderate,0
+31,4,Headache,High,None,0
+28,7,Cramps,Medium,Low,0
+25,5,Headache,Medium,High,0
+29,4,None,Low,None,0
+26,2,Headache,High,Low,0
+29,7,Fatigue,Low,None,0
+30,3,Fatigue,High,High,0
+26,3,None,High,Low,0
+29,6,Cramps,High,Moderate,1
+28,7,Cramps,Medium,Moderate,0
+29,6,Mood Swings,Medium,None,0
+31,5,None,High,High,0
+27,5,Headache,Low,Low,1
+26,5,None,High,High,0
+26,5,Mood Swings,High,Low,1
+26,5,None,Low,None,0
+27,5,None,High,Low,0
+28,4,Mood Swings,Low,High,0
+28,4,Cramps,Medium,High,0
+29,4,Headache,Medium,None,1
+28,3,Mood Swings,Low,High,0
+30,4,Fatigue,Medium,Low,0
+27,4,Cramps,Medium,None,0
+33,3,Fatigue,Low,Low,0
+29,5,Cramps,Medium,High,0
+26,6,Headache,High,None,0
+25,5,Headache,High,Low,1
+28,3,None,Low,High,0
+27,4,Fatigue,Medium,High,0
+29,5,Cramps,High,Moderate,0
+28,4,Headache,High,High,0
+27,4,Mood Swings,Medium,Low,0
+26,5,Headache,Medium,None,1
+24,4,Mood Swings,High,Moderate,0
+27,5,Cramps,High,High,0
+29,3,Headache,Low,High,0
+28,4,Headache,Low,High,1
+25,5,Cramps,High,Low,0
+28,3,Headache,Low,Moderate,0
+28,5,Mood Swings,High,Low,0
+26,4,Headache,High,Moderate,0
+28,5,Fatigue,Low,None,0
+28,5,None,Low,Low,0
+25,6,Mood Swings,Medium,Low,0
+28,5,Fatigue,Medium,None,0
+29,4,Cramps,Medium,Moderate,0
+30,5,Mood Swings,High,High,0
+30,5,None,Low,None,0
+25,5,None,High,High,0
+26,5,Cramps,Low,High,0
+29,4,Cramps,High,None,0
+29,4,Mood Swings,Medium,Moderate,0
+29,3,Headache,Medium,High,0
+35,6,Cramps,Medium,None,0
+29,3,Headache,High,Low,1
+30,4,Fatigue,Low,Low,0
+29,4,None,Low,Low,1
+29,5,Headache,Medium,None,0
+27,4,None,Medium,Low,0
+29,6,Headache,Medium,High,0
+26,4,Fatigue,Medium,Low,0
+27,5,Cramps,Low,Low,0
+27,4,Fatigue,High,High,0
+28,7,Cramps,High,Low,1
+32,3,Cramps,High,High,0
+24,5,None,High,Low,0
+29,5,Fatigue,Medium,High,0
+24,5,Headache,Medium,Low,0
+27,4,Fatigue,Medium,High,0
+30,4,None,High,None,0
+28,5,Cramps,Medium,High,1
+25,4,None,Medium,Low,0
+26,5,Mood Swings,Low,Low,0
+29,7,Mood Swings,Low,Moderate,0
+26,4,Headache,Medium,High,0
+28,3,None,Low,None,0
+28,4,Headache,Low,High,0
+26,7,Headache,Medium,High,0
+32,4,Mood Swings,Medium,None,0
+29,6,Headache,Medium,High,0
+23,6,Mood Swings,Medium,None,1
+28,4,Cramps,High,None,0
+26,5,None,High,High,0
+29,6,Headache,Medium,High,0
+26,4,Mood Swings,Low,Low,0
+27,4,Fatigue,Medium,Low,0
+29,4,Headache,Medium,Moderate,0
+29,3,Cramps,Low,Moderate,0
+25,4,Cramps,High,High,0
+27,3,Fatigue,Medium,None,0
+27,5,Mood Swings,Medium,Moderate,0
+26,4,Headache,High,High,1
+31,5,Mood Swings,High,Moderate,1
+28,3,Cramps,Low,None,0
+25,5,Mood Swings,High,High,0
+29,5,Cramps,High,None,0
+32,3,Mood Swings,High,High,1
+30,5,Fatigue,Low,Moderate,0
+24,6,None,High,Low,1
+27,3,Fatigue,High,Moderate,0
+30,6,Fatigue,Low,Moderate,0
+26,5,None,High,Low,0
+28,4,None,High,Low,1
+29,4,Headache,Low,High,1
+26,5,Headache,Medium,High,0
+27,5,Fatigue,Low,None,0
+21,5,Fatigue,High,None,0
+25,4,Cramps,High,Moderate,0
+27,5,Cramps,High,Low,0
+25,3,Headache,Low,None,0
+31,4,Headache,High,Moderate,0
+25,4,Cramps,High,Low,0
+27,4,Cramps,Low,High,0
+28,6,Mood Swings,Medium,Moderate,0
+30,6,Mood Swings,Medium,High,0
+25,5,Cramps,High,None,0
+30,3,Mood Swings,Low,None,0
+28,4,None,High,Low,0
+26,6,Headache,Low,Moderate,0
+28,5,Headache,Low,High,0
+28,7,Cramps,Medium,Low,0
+26,5,Fatigue,Medium,None,0
+28,5,Cramps,Low,None,0
+27,4,Mood Swings,High,Moderate,1
+28,5,Fatigue,Medium,High,1
+29,4,Mood Swings,High,Moderate,0
+31,5,None,Medium,High,0
+25,5,Mood Swings,Medium,High,0
+32,4,None,High,Moderate,1
+24,3,None,Medium,Low,0
+27,3,Mood Swings,Medium,Moderate,0
+29,5,Mood Swings,High,Moderate,0
+28,3,None,Medium,None,0
+26,2,Fatigue,Medium,None,0
+27,5,None,Medium,Moderate,0
+27,7,Headache,High,Moderate,0
+26,4,None,Low,None,0
+29,5,Fatigue,High,High,0
+28,5,Headache,Low,Moderate,0
+26,4,Cramps,Medium,Low,1
+29,5,Cramps,Low,Low,0
+28,4,Fatigue,High,Low,0
+29,5,None,High,Moderate,0
+29,5,Mood Swings,Medium,High,0
+26,4,Fatigue,Low,High,1
+26,5,Headache,Medium,None,0
+29,4,Headache,Medium,Moderate,1
+29,4,Cramps,High,High,0
+27,5,Headache,Low,Moderate,1
+28,4,Fatigue,Low,None,0
+30,5,Headache,Low,None,0
+26,4,Fatigue,Low,None,0
+29,6,Mood Swings,Medium,Low,1
+27,5,Cramps,Medium,Moderate,1
+27,4,Headache,High,None,0
+30,5,Fatigue,Medium,Moderate,1
+29,6,None,Medium,Low,0
+29,5,Cramps,High,Low,0
+30,5,Mood Swings,High,None,0
+28,3,Fatigue,High,None,0
+29,3,Mood Swings,Medium,High,0
+27,4,Mood Swings,Medium,Moderate,0
+28,4,Headache,High,None,0
+27,4,Headache,High,High,0
+28,5,Fatigue,High,Moderate,0
+29,5,None,Medium,None,0
+26,4,Fatigue,Medium,High,0
+32,5,None,Low,High,0
+25,5,Mood Swings,Medium,Moderate,0
+25,3,Cramps,Medium,High,0
+30,4,Fatigue,Medium,Moderate,0
+29,4,Fatigue,High,Moderate,0
+29,3,None,Medium,Moderate,0
+29,5,Mood Swings,High,Low,0
+27,6,Mood Swings,Low,High,0
+26,6,None,Low,Moderate,0
+28,4,Mood Swings,High,None,0
+26,6,Headache,High,Low,1
+29,5,Cramps,High,Low,1
+27,4,Fatigue,Medium,High,0
+26,4,Cramps,Low,Moderate,0
+27,4,Fatigue,High,High,0
+28,4,Headache,Medium,Low,0
+26,5,Mood Swings,Low,Moderate,1
+26,5,None,Medium,None,0
+28,5,Headache,Low,Moderate,0
+28,5,Cramps,Medium,Low,0
+26,6,None,Low,None,1
+27,5,Mood Swings,Low,Moderate,0
+28,3,Headache,Medium,None,0
+25,2,None,High,None,0
+25,5,Headache,Low,Low,0
+26,3,Headache,High,None,0
+27,4,Mood Swings,Medium,High,0
+28,3,Fatigue,High,Low,1
+30,3,None,High,High,1
+29,5,Mood Swings,High,None,1
+27,5,Headache,High,High,0
+27,4,Mood Swings,High,Moderate,0
+25,2,Fatigue,Low,None,0
+27,4,None,Low,Moderate,0
+27,5,Fatigue,Low,High,0
+28,3,Cramps,Medium,Moderate,0
+26,5,None,High,None,0
+29,4,Fatigue,Low,Moderate,0
+31,5,Headache,Medium,High,0
+27,5,None,Low,High,0
+28,4,None,Low,High,0
+29,6,Mood Swings,High,None,0
+27,4,Headache,Medium,High,0
+28,4,Cramps,High,None,0
+28,4,Fatigue,High,Moderate,0
+28,4,Mood Swings,Low,High,0
+26,4,Fatigue,High,Moderate,0
+28,4,Cramps,Medium,Low,0
+28,6,Cramps,High,Moderate,0
+30,3,None,High,Low,0
+29,3,Cramps,High,Moderate,0
+32,6,Fatigue,Low,None,0
+26,4,Headache,Medium,Moderate,0
+29,4,Headache,Low,None,0
+28,6,None,Low,None,0
+32,4,Fatigue,Low,High,1
+26,6,Fatigue,Low,None,0
+26,5,Cramps,Low,Low,0
+26,4,Fatigue,Medium,High,0
+23,7,Mood Swings,High,High,0
+26,4,Cramps,Low,Moderate,0
+26,5,Mood Swings,Low,None,0
+28,5,None,Medium,None,0
+28,6,Headache,Medium,Low,0
+31,6,None,High,Moderate,0
+29,5,Headache,Medium,Moderate,0
+26,4,None,High,High,0
+26,5,Fatigue,Low,High,0
+28,4,Mood Swings,Low,High,0
+25,7,Headache,High,Low,1
+31,5,Cramps,Medium,Low,0
+30,4,Mood Swings,High,High,0
+27,5,Cramps,Medium,Moderate,0
+24,3,Mood Swings,Low,Low,0
+30,4,Mood Swings,Medium,Moderate,1
+27,6,None,High,Moderate,0
+30,4,Headache,High,None,1
+24,3,Headache,Low,High,0
+26,5,Mood Swings,Medium,None,0
+28,6,Fatigue,Medium,High,0
+28,5,Fatigue,Medium,High,1
+27,5,Cramps,Low,Moderate,0
+29,4,Cramps,Medium,High,0
+25,3,None,High,Moderate,0
+27,6,Mood Swings,Medium,Moderate,0
+28,4,Cramps,Low,High,1
+29,4,Cramps,Medium,Moderate,0
+29,6,Mood Swings,Medium,Moderate,0
+25,5,None,High,Moderate,0
+24,5,Cramps,Medium,Low,0
+30,7,None,High,Moderate,1
+28,4,Headache,High,Low,0
+26,5,None,Low,Low,0
+31,5,Fatigue,High,Moderate,1
+28,5,Fatigue,High,Moderate,0
+30,6,None,Low,Low,0
+28,5,Fatigue,High,Low,0
+32,5,Headache,Low,Moderate,0
+31,6,Mood Swings,Medium,Moderate,0
+27,4,Fatigue,Low,High,1
+29,4,Fatigue,High,Low,0
+29,3,None,Low,Low,0
+30,3,Headache,High,High,1
+26,7,Mood Swings,Medium,Low,0
+29,3,None,Low,None,0
+30,4,None,Medium,Low,0
+24,4,Headache,High,High,1
+25,5,Mood Swings,High,None,0
+23,5,Headache,Medium,Moderate,0
+27,5,Mood Swings,Low,High,0
+29,4,Headache,Low,High,0
+31,4,None,High,Moderate,0
+28,5,None,Medium,High,0
+31,4,Cramps,Medium,Low,0
+25,6,Fatigue,Low,Moderate,0
+24,5,Headache,Low,High,1
+27,5,Cramps,Low,Moderate,0
+28,5,Fatigue,Medium,Moderate,0
+27,6,Headache,Low,Moderate,0
+23,5,Mood Swings,Low,None,0
+27,3,Fatigue,High,High,0
+25,5,None,Low,None,0
+29,4,Cramps,Low,High,0
+28,4,Fatigue,Medium,Low,0
+26,5,Fatigue,Medium,Low,0
+26,6,None,High,Low,0
+25,5,Headache,Low,High,0
+27,5,Mood Swings,High,Moderate,0
+29,6,None,Medium,Moderate,0
+26,5,Mood Swings,High,None,0
+29,7,Headache,Medium,None,0
+26,5,Fatigue,High,Low,0
+26,3,Mood Swings,High,None,0
+27,5,Cramps,Low,High,0
+25,5,Cramps,High,High,0
+26,6,None,Low,None,0
+25,5,Headache,Low,None,1
+31,4,None,Low,None,0
+28,3,None,Low,None,1
+26,4,None,High,Low,0
+28,4,Cramps,Medium,Low,0
+27,4,Cramps,Medium,None,1
+27,5,None,Medium,High,0
+29,6,Cramps,High,Low,0
+29,5,Headache,Low,High,0
+26,3,None,Medium,Moderate,0
+26,5,Cramps,High,High,0
+27,6,Mood Swings,Low,None,0
+23,4,None,Medium,Moderate,0
+24,4,None,Low,Low,0
+30,5,Headache,Medium,Low,1
+31,4,Fatigue,Medium,Moderate,0
+27,5,Fatigue,Medium,High,0
+29,4,Headache,Low,Low,0
+28,5,Headache,High,None,0
+34,4,Headache,Low,Moderate,0
+30,4,Fatigue,Medium,None,0
+27,5,Headache,Low,Moderate,0
+26,4,Cramps,High,Low,0
+24,6,None,Low,High,0
+28,4,None,High,Moderate,1
+26,5,Mood Swings,High,Moderate,0
+25,5,Mood Swings,Low,None,0
+26,3,None,Medium,Low,0
+25,3,Cramps,High,None,0
+31,3,Fatigue,Low,Low,1
+29,6,Fatigue,High,None,0
+27,4,Cramps,Medium,Moderate,0
+30,7,Fatigue,Low,None,0
+28,4,Headache,Low,High,0
+26,5,None,Low,Low,0
+31,6,None,Medium,Low,0
+29,7,Cramps,High,Moderate,1
+25,7,Fatigue,Low,Low,0
+27,6,Mood Swings,High,High,1
+26,6,Mood Swings,High,None,0
+25,5,Fatigue,Medium,Moderate,0
+29,5,Mood Swings,Low,High,0
+31,4,Cramps,High,Low,0
+25,4,Cramps,Low,Low,0
+29,4,Fatigue,Low,High,0
+26,4,Mood Swings,Medium,None,0
+27,4,Cramps,Low,None,0
+26,5,Cramps,Low,Moderate,0
+26,5,Headache,High,Low,0
+28,5,Headache,Medium,High,0
+26,6,Cramps,Low,None,0
+28,3,Fatigue,High,Moderate,0
+27,4,None,Medium,Low,0
+27,4,None,Medium,Low,1
+26,3,Cramps,High,Moderate,0
+26,4,Cramps,High,Moderate,0
+29,4,Cramps,High,None,1
+29,6,Fatigue,High,High,0
+26,5,Headache,High,Low,1
+28,3,Cramps,Low,High,0
+29,6,Cramps,Low,Low,0
+24,6,Mood Swings,Medium,Low,0
+29,5,Fatigue,Low,High,0
+26,4,Cramps,Low,Moderate,0
+29,4,Mood Swings,Low,None,0
+26,4,None,High,Low,0
+24,6,Cramps,Medium,Moderate,0
+24,6,Cramps,Medium,Low,0
+28,6,Mood Swings,Medium,None,0
+28,4,Fatigue,Medium,Low,0
+26,3,Cramps,Low,None,0
+29,5,None,Low,None,1
+24,3,Cramps,High,Low,0
+27,5,None,Medium,Low,1
+25,4,Headache,Low,None,0
+26,4,Headache,Low,Moderate,0
+28,3,None,High,High,0
+26,5,Fatigue,High,None,0
+27,4,Cramps,High,Low,0
+30,3,Cramps,Low,Low,0
+26,2,Headache,Low,Moderate,0
+29,4,None,High,High,0
+25,6,Cramps,Medium,None,0
+29,6,Cramps,High,None,0
+30,4,Fatigue,High,High,0
+23,4,Mood Swings,High,None,0
+26,5,Headache,High,High,0
+29,4,Headache,Low,Low,0
+27,5,Mood Swings,Medium,High,0
+28,5,Cramps,High,None,0
+26,6,Fatigue,Medium,High,0
+28,4,Fatigue,Medium,Moderate,0
+27,4,Headache,Medium,Low,0
+30,4,Fatigue,High,Low,0
+28,4,Mood Swings,Low,High,1
+28,4,Cramps,High,None,1
+27,5,Mood Swings,Medium,Moderate,0
+27,5,None,Medium,Low,0
+27,4,Headache,Low,Low,0
+28,6,Fatigue,High,None,0
+27,4,None,Medium,None,0
+28,4,Fatigue,Low,Moderate,0
+32,4,Cramps,Medium,High,1
+29,2,Cramps,Low,None,0
+27,5,Cramps,Low,High,0
+30,5,Fatigue,High,Moderate,0
+27,4,None,Medium,High,0
+23,5,Cramps,High,Low,0
+25,5,None,Medium,High,1
+24,3,Fatigue,High,Moderate,0
+27,4,None,Medium,Moderate,0
+28,5,Fatigue,High,Moderate,0
+31,3,Fatigue,Low,High,0
+28,5,Headache,Medium,Low,0
+27,3,Fatigue,Medium,None,0
+29,5,Fatigue,Low,Low,0
+23,4,Mood Swings,High,High,0
+28,3,Cramps,Medium,High,0
+29,6,Headache,Medium,None,0
+25,4,Headache,High,High,0
+30,4,Headache,Low,Moderate,0
+28,5,Mood Swings,High,Moderate,0
+27,6,Fatigue,High,Moderate,0
+29,3,Cramps,High,Moderate,0
+32,5,None,Medium,Moderate,0
+28,5,Fatigue,Low,High,0
+28,5,Mood Swings,Low,None,0
+27,5,Fatigue,High,None,0
+26,4,Fatigue,Medium,Moderate,0
+29,4,Mood Swings,High,High,0
+26,5,Headache,Medium,Low,0
+28,3,Headache,Medium,Low,0
+27,2,Cramps,Medium,High,0
+28,5,Cramps,Medium,Moderate,0
+28,5,Headache,Low,None,0
+30,2,None,Medium,High,0
+26,3,Fatigue,Medium,Low,0
+27,5,None,High,Low,0
+26,7,Fatigue,High,Low,0
+27,5,Headache,Low,Moderate,0
+28,4,Cramps,High,Low,0
+29,4,Cramps,Medium,High,0
+26,6,None,High,High,0
+29,4,Cramps,Low,Low,1
+30,4,Headache,High,High,1
+28,4,None,High,Low,1
+31,4,Fatigue,Low,Low,0
+26,5,Cramps,Low,None,0
+25,6,Mood Swings,Medium,Moderate,0
+24,5,Cramps,High,Moderate,0
+30,4,Fatigue,Medium,None,0
+29,4,None,High,None,0
+27,3,Fatigue,High,Moderate,0
+28,5,Mood Swings,Medium,Low,0
+25,4,Headache,High,Low,0
+32,4,Cramps,High,Moderate,1
+28,8,None,High,Low,0
+28,5,Headache,Low,None,0
+29,4,Fatigue,Medium,Low,1
+28,4,None,Low,Low,0
+28,6,Headache,Medium,High,0
+26,5,None,Medium,High,0
+28,3,Mood Swings,High,High,0
+31,5,Mood Swings,Medium,Low,1
+30,4,Cramps,Low,Moderate,0
+31,6,Cramps,Low,None,0
+26,6,Mood Swings,Low,Low,0
+26,4,None,Medium,Moderate,0
+27,6,Mood Swings,Low,Low,1
+28,5,Cramps,Medium,None,0
+30,5,Mood Swings,Low,Low,0
+24,5,Mood Swings,Low,None,0
+31,4,None,Medium,Low,0
+27,4,Headache,Low,None,1
+27,6,Cramps,High,Low,0
+25,4,None,Medium,None,0
+24,4,Mood Swings,Medium,High,0
+29,4,Mood Swings,Medium,Low,0
+28,5,Headache,High,Low,0
+25,7,Cramps,Medium,Moderate,1
+25,3,Cramps,Low,Moderate,0
+27,5,Fatigue,Low,None,1
+31,6,Cramps,Low,Low,0
+27,4,Headache,Medium,None,0
+24,5,Fatigue,Low,High,0
+27,3,Fatigue,Medium,Moderate,0
+27,5,Mood Swings,Low,None,1
+22,4,Mood Swings,High,None,0
+27,5,Cramps,High,Moderate,0
+27,6,Fatigue,High,Low,0
+29,7,Mood Swings,High,None,0
+31,5,Headache,Medium,Moderate,0
+30,5,Mood Swings,Low,Low,0
+27,5,Mood Swings,High,High,0
+25,4,Fatigue,Medium,Moderate,0
+33,5,Fatigue,High,None,0
+28,4,None,High,High,0
+28,5,Headache,Medium,Low,0
+27,6,Fatigue,Medium,Low,0
+28,3,Cramps,Low,Moderate,1
+27,6,Headache,Low,Moderate,0
+26,6,Headache,High,Moderate,0
+26,4,Fatigue,High,Low,0
+27,2,Headache,Low,High,0
+26,4,Fatigue,Low,Low,0
+26,6,Mood Swings,Medium,None,0
+28,4,None,Low,Low,0
+27,4,Mood Swings,Low,None,0
+31,4,Fatigue,High,High,0
+22,5,Fatigue,Low,Moderate,0
+30,5,Mood Swings,High,Moderate,1
+30,4,Cramps,Low,Low,0
+23,4,Cramps,Medium,Moderate,0
+27,4,Cramps,Low,High,1
+27,4,Fatigue,Low,Moderate,0
+25,6,Headache,Low,Low,0
+26,4,Fatigue,High,High,0
+25,6,Headache,Medium,None,1
+31,6,Mood Swings,Low,Low,0
+29,5,None,High,None,1
+30,4,Headache,Medium,High,0
+29,5,Cramps,High,Low,0
+25,4,Fatigue,High,Low,1
+26,4,Mood Swings,Medium,High,0
+28,5,Cramps,Low,Moderate,0
+25,3,Mood Swings,High,Low,0
+29,6,None,High,Low,0
+27,4,Fatigue,Low,None,1
+27,5,Fatigue,Low,Moderate,0
+29,5,None,Medium,None,0
+28,4,Fatigue,Medium,None,0
+27,5,Headache,Medium,Moderate,0
+30,4,Mood Swings,Low,Moderate,0
+25,5,Cramps,High,High,0
+29,3,None,High,Moderate,0
+29,5,Headache,Medium,Low,1
+27,6,Cramps,Low,Moderate,0
+28,3,Cramps,High,High,0
+25,4,None,Medium,High,1
+29,5,Headache,High,High,0
+27,5,Cramps,High,Moderate,0
+26,5,Cramps,Low,Moderate,0
+30,5,Headache,Low,None,1
+26,5,Fatigue,High,None,0
+25,6,Cramps,Medium,Low,1
+24,5,Mood Swings,Low,None,0
+29,4,Headache,High,Low,0
+25,5,Cramps,Low,High,0
+31,6,None,Low,None,0
+23,4,Mood Swings,Low,Moderate,0
+31,4,Cramps,High,None,0
+28,6,Mood Swings,Medium,Low,0
+27,4,Mood Swings,Medium,None,0
+26,2,Fatigue,Medium,High,0
+28,5,Mood Swings,Low,Moderate,0
+27,4,Fatigue,High,Low,0
+30,4,Headache,Low,Moderate,0
+28,5,Fatigue,Medium,Moderate,0
+28,5,None,Medium,Low,0
+27,5,Cramps,High,Moderate,0
+27,4,Headache,Low,Moderate,0
+28,5,Headache,Medium,None,1
+24,4,None,High,Moderate,0
+25,5,Fatigue,Low,Moderate,0
+29,5,Cramps,Low,Moderate,0
+28,4,Fatigue,Medium,Moderate,0
+27,6,Mood Swings,Medium,Low,0
+28,4,Fatigue,Low,High,0
+28,5,Headache,Low,None,0
+26,5,Cramps,Medium,Moderate,0
+26,6,Fatigue,Low,Moderate,0
+28,4,Cramps,Medium,Low,0
+26,4,Cramps,Low,High,0
+28,4,Mood Swings,Medium,Moderate,0
+24,4,Mood Swings,High,Low,1
+30,5,Headache,Medium,None,0
+28,3,None,Medium,None,0
+28,3,Cramps,High,Moderate,1
+29,3,None,Low,Moderate,0
+31,5,Headache,High,High,0
+30,6,Cramps,Medium,High,0
+24,4,Cramps,Low,Moderate,1
+25,4,None,High,Low,0
+26,5,Fatigue,Low,High,0
+28,6,Mood Swings,Low,Moderate,0
+29,4,Fatigue,High,High,1
+26,5,None,Low,Moderate,0
+28,5,Mood Swings,High,None,0
+26,5,Fatigue,Medium,Moderate,1
+26,5,Mood Swings,Low,None,0
+25,6,Cramps,Medium,High,0
+26,2,Fatigue,Medium,Moderate,0
+25,5,Mood Swings,Low,High,0
+26,4,Mood Swings,High,None,1
+30,3,Mood Swings,Low,Moderate,0
+26,5,Fatigue,Medium,High,0
+33,6,Headache,Medium,None,0
+28,4,Fatigue,High,High,0
+28,5,None,Low,Low,1
+26,6,Fatigue,Medium,None,0
+29,6,Mood Swings,Medium,None,0
+26,6,Cramps,Medium,None,0
+28,5,Fatigue,High,Moderate,1
+33,5,Fatigue,Medium,Moderate,0
+27,3,Mood Swings,Medium,Moderate,0
+30,4,Cramps,Low,Low,0
+26,4,Cramps,Low,Low,0
+27,7,None,Medium,None,0
+31,4,Fatigue,Medium,Low,0
+26,5,Cramps,Low,High,0
+31,5,Cramps,High,None,0
+29,5,Headache,High,None,0
+26,6,Headache,High,High,1
+29,4,Cramps,High,None,0
+29,5,None,High,Low,1
+29,4,Cramps,High,Moderate,0
+24,3,Mood Swings,High,High,0
+26,4,Fatigue,High,Low,1
+27,4,None,Low,High,0
+27,4,Mood Swings,High,High,0
+29,4,None,High,None,1
+28,3,Mood Swings,High,None,0
+25,4,Fatigue,Medium,Low,0
+28,3,Fatigue,Low,High,0
+29,5,Headache,Low,None,0
+29,5,Mood Swings,Low,None,0
+30,3,Headache,High,High,0
+29,4,Mood Swings,High,Low,0
+28,4,Headache,Medium,Low,0
+27,5,Fatigue,Low,High,0
+24,6,None,High,Low,0
+28,3,Headache,Low,None,0
+28,5,Mood Swings,Medium,High,0
+28,4,Mood Swings,Medium,None,0
+25,5,Fatigue,Medium,Moderate,0
+25,5,Mood Swings,Low,Moderate,0
+30,4,Cramps,High,Low,0
+27,4,None,High,Moderate,1
+29,4,Headache,Medium,None,0
+28,6,None,High,Moderate,0
+28,5,Fatigue,Medium,None,0
+29,6,Headache,Low,Low,0
+26,4,Headache,Medium,Low,1
+28,4,Cramps,Low,None,1
+27,3,Fatigue,Medium,Moderate,0
+27,3,Mood Swings,High,Low,0
+27,3,Cramps,High,High,1
+28,5,Cramps,Medium,Low,1
+27,5,None,High,Moderate,0
+30,3,None,High,High,0
+26,5,None,High,Moderate,0
+27,4,Cramps,Low,None,1
+27,5,Mood Swings,High,High,0
+30,6,Headache,Low,Moderate,0
+28,5,None,Medium,High,0
+30,4,Mood Swings,High,Moderate,0
+25,4,Fatigue,High,High,0
+28,2,None,High,Moderate,1
+29,4,Headache,Medium,None,0
+28,4,Fatigue,Low,High,0
+30,4,Fatigue,Low,High,0
+26,4,Headache,High,High,0
+30,5,None,Medium,High,0
+32,4,Cramps,Medium,None,0
+27,4,Headache,Medium,High,0
+27,5,Headache,Medium,Low,0
+30,5,Headache,Medium,None,0
+31,3,Fatigue,Low,Low,0
+26,6,Mood Swings,Low,High,1
+27,4,Cramps,Low,Moderate,1
+27,5,None,High,Low,0
+25,5,None,Medium,High,0
+26,5,Mood Swings,High,Low,1
+25,5,Headache,Medium,High,0
+26,5,Cramps,Low,High,0
+27,4,None,High,High,1
+28,5,None,Low,Moderate,0
+31,3,Headache,Medium,Low,0
+26,5,Mood Swings,Medium,None,1
+29,4,Cramps,Medium,None,0
+27,4,Mood Swings,Low,None,0
+27,4,Mood Swings,Medium,None,0
+29,3,Cramps,Low,High,0
+25,4,Cramps,High,Low,0
+28,5,None,Medium,Low,0
+28,5,None,Medium,Moderate,1
+28,3,Cramps,Medium,Low,0
+28,6,Fatigue,High,Low,0
+32,4,None,Medium,Low,0
+26,5,Fatigue,Low,Moderate,0
+26,5,Cramps,Low,None,0
+26,4,None,Medium,Low,1
+26,6,Mood Swings,Medium,Moderate,1
+26,3,Cramps,High,Moderate,0
+30,5,Headache,High,High,0
+30,6,Fatigue,High,Moderate,0
+26,4,Cramps,Medium,None,0
+26,6,Cramps,High,Low,0
+28,4,None,High,Moderate,0
+26,5,None,Low,None,1
+29,5,None,High,Moderate,0
+28,4,Headache,Low,Moderate,0
+24,5,None,Low,Moderate,0
+31,5,Cramps,High,Moderate,0
+31,3,None,Low,Moderate,0
+26,6,Mood Swings,Medium,None,0
+27,3,None,Medium,Low,0
+28,6,Headache,High,Low,0
+28,6,Mood Swings,Medium,Low,0
+29,3,Cramps,Low,Low,0
+32,4,Cramps,Medium,None,0
+27,3,Fatigue,High,High,0
+26,4,Mood Swings,High,High,0
+25,4,Fatigue,Low,None,0
+26,5,Mood Swings,High,None,0
+27,6,Mood Swings,Medium,Moderate,0
+31,6,Headache,High,Moderate,0
+26,4,Fatigue,Low,Moderate,0
+28,4,Headache,High,Low,0
+27,3,Mood Swings,Medium,Moderate,0
+30,4,Cramps,Low,High,0
+33,5,Mood Swings,Medium,Low,1
+26,6,Headache,Low,Moderate,0
+27,3,Fatigue,High,Low,1
+30,4,Fatigue,Low,High,0
+29,4,Headache,Low,Moderate,0
+31,5,Fatigue,High,High,1
+29,4,None,Medium,High,0
+27,5,Cramps,High,High,0
+29,4,Cramps,Low,Moderate,0
+30,4,Cramps,High,None,0
+29,5,Fatigue,Low,Moderate,0
+29,5,Fatigue,High,High,0
+30,4,Mood Swings,High,Moderate,1
+30,4,Mood Swings,Medium,High,0
+30,4,Cramps,Low,None,1
+29,4,None,Medium,Low,1
+27,4,Mood Swings,Low,None,0
+28,6,Mood Swings,High,None,0
+30,5,Fatigue,Low,Low,1
+26,4,None,Medium,Moderate,1
+28,5,Cramps,Medium,Low,0
+27,4,Mood Swings,Medium,Moderate,0
+28,6,None,Low,Moderate,0
+30,5,None,Medium,High,0
+28,4,Cramps,Medium,High,0
+28,5,None,Medium,Low,0
+25,3,None,High,None,0
+29,3,None,High,Low,0
+29,3,Mood Swings,Low,Moderate,0
+32,5,Cramps,Low,High,0
+27,6,None,Medium,Low,0
+28,7,None,High,Low,0
+28,5,Mood Swings,Medium,High,0
+31,5,Cramps,Medium,High,0
+27,3,Fatigue,High,High,0
+28,4,Mood Swings,High,Moderate,1
+29,4,Cramps,High,High,0
+28,4,None,Low,None,0
+27,4,Cramps,Low,Low,0
+28,4,Cramps,Medium,High,1
+30,3,Cramps,Low,High,0
+25,5,Fatigue,High,Moderate,0
+28,3,Cramps,High,Moderate,0
+26,5,Fatigue,Low,Low,0
+30,7,None,Medium,None,0
+24,4,Fatigue,Medium,Low,0
+26,2,None,Low,High,0
+28,4,None,Medium,None,0
+31,6,Fatigue,Medium,None,0
+27,6,Mood Swings,Medium,None,0
+26,3,Headache,High,None,0
+31,5,Cramps,High,Low,0
+25,4,Headache,Low,Moderate,0
+23,4,Cramps,High,Moderate,0
+28,7,Cramps,Medium,High,0
+26,3,None,High,Moderate,0
+25,5,Cramps,Low,Moderate,1
+29,5,Cramps,High,Moderate,0
+28,6,Fatigue,Medium,Moderate,0
+26,5,Headache,Medium,High,0
+25,5,Fatigue,Low,Low,0
+29,4,Cramps,High,None,0
+29,5,None,High,Moderate,0
+27,4,Fatigue,High,Low,0
+31,5,Fatigue,Medium,Moderate,0
+25,4,Mood Swings,Low,Moderate,0
+24,5,Cramps,High,None,0
+26,4,None,Medium,None,0
+27,6,Fatigue,Medium,None,0
+28,4,Fatigue,Medium,Moderate,0
+27,3,None,High,Moderate,0
+28,6,Cramps,High,Moderate,1
+25,4,Mood Swings,High,None,1
+30,4,Fatigue,High,High,0
+27,4,Mood Swings,High,Low,0
+30,6,Headache,High,High,0
+28,2,Cramps,High,Moderate,0
+28,8,Headache,High,Moderate,0
+29,6,Headache,High,High,0
+28,5,Headache,Medium,Moderate,0
+29,4,Cramps,High,Low,1
+30,5,Cramps,Low,Moderate,0
+28,5,None,Medium,Low,0
+29,5,Mood Swings,High,High,0
+27,5,Mood Swings,Low,High,0
+30,5,None,High,Moderate,0
+26,4,None,Low,Low,0
+31,4,Headache,Low,Moderate,0
+27,4,None,Low,None,0
+25,6,Fatigue,Low,None,0
+28,5,Mood Swings,Medium,None,0
+26,2,None,Medium,None,0
+29,5,Fatigue,Low,Moderate,0
+26,5,Fatigue,High,None,0
+27,4,Fatigue,Low,Low,0
+24,4,Fatigue,Medium,High,0
+27,6,Headache,High,High,0
+23,5,Fatigue,Medium,None,0
+24,4,Headache,Medium,None,1
+29,5,Headache,High,None,0
+29,4,Fatigue,Low,Moderate,0
+28,3,Mood Swings,Low,High,0
+26,4,Fatigue,Low,None,1
+27,5,Fatigue,Low,Low,0
+27,5,Fatigue,High,None,0
+25,5,Mood Swings,High,High,0
+31,5,Cramps,High,None,0
+29,5,Cramps,Medium,High,0
+27,4,Headache,High,None,0
+28,5,Headache,Low,Low,0
+28,5,Mood Swings,Medium,None,1
+23,5,None,Low,Low,0
+27,6,Cramps,Low,Low,0
+26,5,Headache,High,None,0
+25,5,Cramps,High,Low,0
+27,6,Mood Swings,Low,Moderate,0
+31,4,Mood Swings,Low,None,0
+29,4,None,Medium,None,0
+26,4,None,High,Low,0
+29,4,Mood Swings,Medium,Low,0

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="icon" href="/static/icon.ico" type="image/x-icon" />
+  <style>
+    /* Reset default margin and padding */
+    body, h1, form, input, button {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling with professional gradient */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #1a1a1a, #333, #1a1a1a);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Left side: Image carousel modified into small fancy cards */
+    .image-carousel {
+      width: 40%;
+      height: 100vh;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Each card will be the container for an image */
+    .card {
+      width: 200px;      /* Set card width */
+      height: 250px;     /* Set card height */
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      /* Apply the slideUp animation */
+      animation: slideUp 10s linear infinite;
+    }
+
+    /* Stagger the animation delays for sequence effect */
+    .card:nth-child(1) { animation-delay: 2s; }
+    .card:nth-child(2) { animation-delay: 4s; }
+    .card:nth-child(3) { animation-delay: 6s; }
+    .card:nth-child(4) { animation-delay: 8s; }
+    .card:nth-child(5) { animation-delay: 10s; }
+    .card:nth-child(6) { animation-delay: 12s; }
+    .card:nth-child(7) { animation-delay: 14s; }
+    .card:nth-child(8) { animation-delay: 16s; }
+
+    /* Image styles inside the card */
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Keyframes for vertical sliding animation */
+    @keyframes slideUp {
+      0%   { top: 100%; }
+      10%  { top: calc(50% - 125px); }
+      90%  { top: calc(50% - 125px); }
+      100% { top: -250px; }
+    }
+
+    /* Center: Glowing text animation */
+    .app-name {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 50px;
+      font-weight: bold;
+      color: #FF758F;
+      text-shadow: 0 0 10px #FF758F, 0 0 20px #FF758F, 0 0 30px #FF758F;
+      animation: glow 2s ease-in-out infinite alternate;
+      z-index: 1;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #FF758F, 0 0 20px #FF758F, 0 0 30px #FF758F; }
+      100% { text-shadow: 0 0 20px #FF758F, 0 0 40px #FF758F, 0 0 60px #FF758F; }
+    }
+
+    .tagline {
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      color: #FF758F;
+      text-align: center;
+      position: relative;
+      top: -10px;
+      opacity: 0;
+      animation: fadeInTagline 4s infinite;
+    }
+
+    @keyframes fadeInTagline {
+      0% { opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Right side: Form styling */
+    form {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 400px;
+      backdrop-filter: blur(10px);
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #FF758F;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #FF758F;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #A4133C;
+    }
+
+    a {
+      color: #FF758F;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #A4133C;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Left side: Image carousel as small fancy cards -->
+  <div class="image-carousel">
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/b7/c4/70/b7c4706aeb987cf1262fdde403efc3ba.jpg" alt="Image 1" />
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/236x/2f/88/a3/2f88a3d3b85c898f4e60ed711b3dd4e9.jpg" alt="Image 2" />
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/2c/c7/11/2cc711af7c7941f69ca783513ef7b1c0.jpg" alt="Image 3" />
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/d1/cb/4c/d1cb4c317cf57184636ae90ebefe9bf2.jpg" alt="Image 4" />
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/e4/a4/11/e4a4116053a32ae7b6c069bc85e331b5.jpg" alt="Image 5" />
+    </div>
+  <div class="card">
+      <img src="https://i.pinimg.com/736x/9f/3f/f9/9f3ff9c4fa66fd03c6d422505ae20a16.jpg" alt="Image 6" />
+    </div>
+  <div class="card">
+      <img src="https://i.pinimg.com/736x/94/4c/94/944c94300f972cbcc9d804226c8a87ab.jpg" alt="Image 7" />
+    </div>
+  <div class="card">
+      <img src="https://i.pinimg.com/736x/24/a8/79/24a879aece63739a1fb9faa9196caf87.jpg" alt="Image 8" />
+    </div>
+  </div>
+
+  <!-- Center: Glowing text animation -->
+  <div class="app-name">REDMOON</div>
+  <div class="tagline">Track, Predict, Thrive – Your Wellness Companion.</div>
+
+  <!-- Right side: Login Form -->
+  <form method="POST" action="/login">
+    <h1>Login Page</h1>
+    <a href="{{ url_for('signup') }}">Don't have an account? Click Here</a>
+    <br /><br />
+    <input type="text" name="username" placeholder="Enter username" required aria-label="Username" />
+    <br />
+    <input type="password" name="password" placeholder="Enter password" required aria-label="Password" />
+    <br />
+    <input type="submit" value="Login" />
+  </form>
+</body>
+</html>

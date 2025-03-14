@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Period Predictor</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <!-- Flatpickr CSS for enhanced datepicker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Define CSS variables for light mode */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --card-background: rgba(255, 255, 255, 0.9);
+  --card-border: 1px solid rgba(0, 0, 0, 0.1);
+  --sidebar-background: rgba(128, 15, 47, 0.9);
+  --sidebar-text: #ffffff;
+  --button-background: #800F2F;
+  --button-text: #ffffff;
+  --button-hover-background: #FF758F;
+  --button-hover-text: #000000;
+  --input-background: #fdfdfd;
+  --input-text: #333333;
+  --input-border: 1px solid #ccc;
+  --input-focus-border: #FF758F;
+  --input-focus-shadow: 0 0 8px rgba(255, 117, 143, 0.5);
+  --results-box-background: rgba(255, 255, 255, 0.9);
+  --results-box-border: 1px solid rgba(0, 0, 0, 0.1);
+  --results-box-text: #333333;
+  --phases-card-background: rgba(255, 255, 255, 0.9);
+  --phases-card-border: 2px solid #FF758F;
+  --phases-card-text: #333333;
+}
+
+/* Define CSS variables for dark mode */
+body.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-background: rgba(0, 0, 0, 0.5);
+  --card-border: 1px solid rgba(255, 255, 255, 0.1);
+  --sidebar-background: rgba(128, 15, 47, 0.9);
+  --sidebar-text: #ffffff;
+  --button-background: #FF758F;
+  --button-text: #000000;
+  --button-hover-background: #800F2F;
+  --button-hover-text: #ffffff;
+  --input-background: rgba(255, 255, 255, 0.1);
+  --input-text: #ffffff;
+  --input-border: 1px solid rgba(255, 255, 255, 0.3);
+  --input-focus-border: #FF758F;
+  --input-focus-shadow: 0 0 8px rgba(255, 117, 143, 0.5);
+  --results-box-background: rgba(0, 0, 0, 0.5);
+  --results-box-border: 1px solid rgba(255, 255, 255, 0.1);
+  --results-box-text: #ffffff;
+  --phases-card-background: rgba(0, 0, 0, 0.8);
+  --phases-card-border: 2px solid #FF758F;
+  --phases-card-text: #ffffff;
+}
+
+/* Apply CSS variables */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Top Bar Styling */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: var(--sidebar-background);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.top-bar-icon {
+  background: none;
+  border: none;
+  color: var(--sidebar-text);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.top-bar-icon:hover {
+  color: #FF758F;
+  transform: translateY(-2px);
+}
+
+.top-bar-icon:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Sidebar styling */
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  background-color: var(--sidebar-background);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  color: var(--sidebar-text);
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar.collapsed .sidebar-text {
+  display: none;
+}
+
+.sidebar h4 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--sidebar-text);
+}
+
+.sidebar .list-group-item {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.sidebar .list-group-item a {
+  color: var(--sidebar-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.sidebar .list-group-item a:hover {
+  color: #FF758F;
+}
+
+.sidebar .list-group-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main content styling */
+.content {
+  margin-left: 250px;
+  padding: 30px;
+  width: calc(100% - 250px);
+  transition: margin-left 0.3s ease;
+  margin-top: 80px;
+}
+
+.content.expanded {
+  margin-left: 80px;
+}
+
+/* Custom button styling */
+.custom-button {
+  background-color: var(--button-background) !important;
+  color: var(--button-text) !important;
+  border: 2px solid var(--button-background) !important;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: var(--button-hover-background) !important;
+  color: var(--button-hover-text) !important;
+  border: 2px solid var(--button-hover-background) !important;
+  transform: translateY(-2px);
+}
+
+/* Form Section Styling */
+.tracker-section,
+.prediction-section {
+  background-color: var(--card-background);
+  border: var(--card-border);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease;
+  color: var(--text-color);
+}
+
+.tracker-section {
+  width: 60%;
+  float: left;
+}
+
+.prediction-section {
+  width: 35%;
+  float: right;
+}
+
+.tracker-section h2,
+.tracker-section h3,
+.prediction-section h2 {
+  color: #d86a7f;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.tracker-section label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Customized input styles */
+.tracker-section input[type="date"],
+.tracker-section input[type="number"],
+.tracker-section select,
+.flatpickr-input {
+  width: 250px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border: var(--input-border);
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--input-background);
+  color: var(--input-text);
+  transition: all 0.3s ease;
+}
+
+.tracker-section input[type="date"]:focus,
+.tracker-section input[type="number"]:focus,
+.tracker-section select:focus,
+.flatpickr-input:focus {
+  border-color: var(--input-focus-border);
+  box-shadow: var(--input-focus-shadow);
+}
+
+/* Results Box Styling */
+#results-box {
+  background-color: var(--results-box-background);
+  border: var(--results-box-border);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--results-box-text);
+  animation: fadeIn 1s ease;
+}
+
+.result-item {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.result-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+/* Prediction Result Styling */
+.prediction-container {
+  background-color: var(--card-background);
+  border: 2px solid #FF758F;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  animation: fadeInUp 1s ease;
+}
+
+.prediction-container h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.prediction-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.prediction-container li {
+  padding: 5px 0;
+  border-bottom: 1px dashed #FF758F;
+}
+
+.prediction-container li:last-child {
+  border-bottom: none;
+}
+
+/* Hidden card for menstrual phases */
+.phases-card {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  width: 250px;
+  background-color: var(--phases-card-background);
+  border: var(--phases-card-border);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: none;
+  z-index: 1000;
+  text-align: left;
+  animation: fadeIn 0.5s ease;
+  color: var(--phases-card-text);
+}
+
+.phases-card h3 {
+  margin-top: 0;
+  color: #FF758F;
+  font-size: 18px;
+}
+
+.phases-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.phases-card li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.phases-card .close-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  color: #FF758F;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Toggle Button Styling */
+.sidebar-toggle {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  background: none;
+  border: none;
+  color: var(--sidebar-text);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1002;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  color: #FF758F;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+
+  .sidebar.collapsed {
+    width: 60px;
+  }
+
+  .content {
+    margin-left: 80px;
+  }
+
+  .content.expanded {
+    margin-left: 60px;
+  }
+
+  .tracker-section,
+  .prediction-section {
+    width: 100%;
+    float: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-icons">
+        <button class="top-bar-icon" id="toggleMode" data-tooltip="Toggle Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      <a href="{{ url_for('chatbot') }}" class="top-bar-icon" data-tooltip="Chatbot">
+        <i class="fas fa-comment-dots"></i>
+      </a>
+      <button class="top-bar-icon" id="togglePhases" data-tooltip="Information">
+        <i class="fas fa-info-circle"></i>
+      </button>
+      <form method="POST" action="{{ url_for('logout') }}" style="display: inline;">
+        <button type="submit" class="top-bar-icon" data-tooltip="Logout">
+          <i class="fas fa-sign-out-alt"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <ul class="list-group">
+      <li class="list-group-item">
+       <button class="sidebar-toggle" id="toggleSidebar">☰</button>
+      </li>
+      <li class="list-group-item">
+        <a href="#predict"><i class="fas fa-calendar-alt"></i><span class="sidebar-text">Predict Period</span></a>
+      </li>
+      <li class="list-group-item">
+        <a href="#" onclick="findNearbyPlaces('toilet')"><i class="fas fa-restroom"></i><span class="sidebar-text">Washrooms</span></a>
+      </li>
+      <li class="list-group-item">
+        <a href="#" onclick="findNearbyPlaces('doctor')"><i class="fas fa-user-md"></i><span class="sidebar-text">Gynecologists</span></a>
+      </li>
+      <li class="list-group-item">
+        <a href="/period-resources"><i class="fas fa-book"></i><span class="sidebar-text">Resources</span></a>
+      </li>
+      <li class="list-group-item">
+        <a href="/submit_blog"><i class="fas fa-pen"></i><span class="sidebar-text">Stories</span></a>
+      </li>
+      <li class="list-group-item">
+        <a href="/community"><i class="fas fa-comments"></i><span class="sidebar-text">Community</span></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content" id="content">
+    <!-- Menstrual Tracker Card -->
+    <div class="tracker-section animate__animated animate__fadeInUp">
+      <h2>Menstrual Cycle Tracker</h2>
+      <div class="mb-3">
+        <label for="startDate">Last Period Start Date:</label>
+        <input type="text" id="startDate" class="form-control flatpickr-input" placeholder="Select Date">
+      </div>
+      <div class="mb-3">
+        <label for="cycleLength">Cycle Length (days):</label>
+        <input type="number" id="cycleLength" value="28" class="form-control">
+      </div>
+
+      <h3>Additional Tracking</h3>
+      <div class="mb-3">
+        <label for="sexDate">Last Unprotected Sex Date:</label>
+        <input type="text" id="sexDate" class="form-control flatpickr-input" placeholder="Select Date">
+      </div>
+      <div class="mb-3">
+        <label for="ovulationTest">Ovulation Test Result:</label>
+        <select id="ovulationTest" class="form-select">
+          <option value="negative">Negative</option>
+          <option value="positive">Positive (LH Surge Detected)</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="birthControl">Birth Control Used:</label>
+        <select id="birthControl" class="form-select">
+          <option value="none">None</option>
+          <option value="pill">Birth Control Pill</option>
+          <option value="iud">IUD</option>
+          <option value="injection">Injection</option>
+        </select>
+      </div>
+      <button onclick="storeCycle()" class="btn custom-button animate__animated animate__fadeIn">Record Cycle</button>
+    </div>
+
+    <!-- Predict Next 3 Periods Card -->
+    <div class="prediction-section animate__animated animate__fadeInUp">
+      <h2>Predict Next 3 Periods</h2>
+      <button onclick="predictFuture()" class="btn custom-button mb-3 animate__animated animate__fadeIn">Predict</button>
+      <div class="prediction-container" id="output"></div>
+    </div>
+
+    <!-- Results Box for nearby places -->
+    <div id="results-box" style="display: none;">
+      <h3>Nearby Places</h3>
+      <div id="results-list"></div>
+    </div>
+  </div>
+
+  <!-- Hidden Card with Menstrual Phases Information -->
+  <div class="phases-card" id="phasesCard">
+    <span class="close-button" id="closePhases">&times;</span>
+    <h3>Menstrual Phases</h3>
+    <ul>
+      <li><strong>Menstrual Phase:</strong> Day 1-5</li>
+      <li><strong>Follicular Phase:</strong> Day 1-13</li>
+      <li><strong>Ovulatory Phase:</strong> Around Day 14</li>
+      <li><strong>Luteal Phase:</strong> Day 15-28</li>
+    </ul>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script>
+    //jst added
+    // Function to toggle between day and night mode
+    const toggleModeButton = document.getElementById('toggleMode');
+    const body = document.body;
+
+    toggleModeButton.addEventListener('click', function () {
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+      toggleModeButton.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      toggleModeButton.setAttribute('data-tooltip', isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+    });
+
+    // Initialize Flatpickr on date inputs
+    flatpickr("#startDate", {
+      dateFormat: "Y-m-d",
+      allowInput: true
+    });
+    flatpickr("#sexDate", {
+      dateFormat: "Y-m-d",
+      allowInput: true
+    });
+
+    // Function to toggle sidebar
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const toggleSidebar = document.getElementById('toggleSidebar');
+
+    toggleSidebar.addEventListener('click', function() {
+      sidebar.classList.toggle('collapsed');
+      content.classList.toggle('expanded');
+      toggleSidebar.textContent = sidebar.classList.contains('collapsed') ? '☰' : '✕';
+    });
+
+    // Function to toggle phases card
+    const toggleBtn = document.getElementById('togglePhases');
+    const phasesCard = document.getElementById('phasesCard');
+    const closeBtn = document.getElementById('closePhases');
+
+    toggleBtn.addEventListener('click', function() {
+      phasesCard.style.display = phasesCard.style.display === "none" ? "block" : "none";
+    });
+
+    closeBtn.addEventListener('click', function() {
+      phasesCard.style.display = "none";
+    });
+
+    // Function to change background dynamically using Unsplash API
+    function changeBackground() {
+      const query = "women health pink peace women empowerment girls "; // Keywords for the images
+      const accessKey = "5NcnWp05IDiJyAN_NQjemQxbt2yo--H524EJHjebDVs"; // Replace with your Unsplash access key
+      const url = `https://api.unsplash.com/photos/random?query=${query}&client_id=${accessKey}`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          document.body.style.backgroundImage = `url(${data.urls.full})`;
+          document.body.style.backgroundSize = 'cover';
+          document.body.style.backgroundPosition = 'center';
+          // Update sidebar color based on background image
+          sidebar.style.backgroundColor = `rgba(128, 15, 47, 0.9)`; // Dark contrast with transparency
+        })
+        .catch(error => {
+          console.error("Failed to load background image. Using default gradient.");
+          document.body.style.background = 'linear-gradient(to bottom right, #FF758F, #FF8FA3, #FF758F, #590D22)';
+          sidebar.style.backgroundColor = `rgba(128, 15, 47, 0.9)`; // Fallback color
+        });
+    }
+
+    // Change background on page load
+    changeBackground();
+
+    // Function to record the cycle
+    function storeCycle() {
+      let startDate = document.getElementById('startDate').value;
+      let cycleLength = document.getElementById('cycleLength').value;
+
+      if (!startDate || !cycleLength) {
+        alert("Please enter both start date and cycle length.");
+        return;
+      }
+
+      fetch('/add_cycle', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ start_date: startDate, cycle_length: cycleLength })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.message);  // Display success message from backend
+      })
+      .catch(error => console.error('Error:', error));
+    }
+
+    // Function to predict next 3 periods and display them in a styled container
+    function predictFuture() {
+      fetch('/get_predictions')
+      .then(response => response.json())
+      .then(data => {
+        if (data.error) {
+          alert(data.error);  // Show error if no predictions found
+        } else {
+          const predictionHTML = `
+            <div class="prediction-container">
+              <h4>Predicted Period Dates:</h4>
+              <ul>
+                ${data.predicted_dates.map(date => `<li>${date}</li>`).join('')}
+              </ul>
+            </div>
+          `;
+          document.getElementById('output').innerHTML = predictionHTML;
+        }
+      })
+      .catch(error => console.error('Error:', error));
+    }
+
+    // Function to find nearby places using geolocation and LocationIQ API
+    function findNearbyPlaces(tag) {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            fetchNearbyPlaces(lat, lon, tag);
+          },
+          error => {
+            console.error("Error fetching location:", error);
+            alert("Unable to fetch your location. Please enable location services and try again.");
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by your browser.");
+      }
+    }
+
+    function fetchNearbyPlaces(lat, lon, tag) {
+      const apiKey = "pk.1104b74b8b88182741257ab4b4f06d80"; // Replace with your valid LocationIQ API key
+      fetch(`https://us1.locationiq.com/v1/nearby?key=${apiKey}&lat=${lat}&lon=${lon}&tag=amenity&radius=5000&format=json`)
+        .then(response => response.json())
+        .then(data => {
+          const resultsBox = document.getElementById('results-box');
+          const resultsList = document.getElementById('results-list');
+          resultsList.innerHTML = ''; // Clear previous results
+
+          if (data.length > 0) {
+            resultsBox.style.display = 'block';
+            data.forEach(place => {
+              const listItem = document.createElement('div');
+              listItem.classList.add('result-item');
+
+              const placeName = place.name || "Unnamed";
+              let placeAddress = "Address not available";
+              if (place.address) {
+                placeAddress = `${place.address.road || ''}, ${place.address.city || ''}, ${place.address.state || ''}, ${place.address.country || ''}`;
+              }
+
+              listItem.textContent = `${placeName} - ${placeAddress}`;
+              resultsList.appendChild(listItem);
+            });
+          } else {
+            resultsBox.style.display = 'block';
+            resultsList.textContent = "No places found nearby.";
+          }
+        })
+        .catch(error => {
+          console.error("Error fetching places:", error);
+          alert("Error fetching places. Please try again later.");
+        });
+    }
+  </script>
+</body>
+</html>

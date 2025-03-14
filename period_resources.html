@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Period Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body{
+            background: linear-gradient(to bottom right, #FF758F, #FF8FA3, #FF758F, #590D22);
+        }
+        .resource-item {
+            margin-bottom: 20px;
+        }
+        .resource-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .resource-link {
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+        video {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        /* Style for the form section */
+        .submit-form {
+            background-color: #8c0f41;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(177, 6, 94, 0.1);
+        }
+        .submit-form input, .submit-form textarea {
+            width: 100%;
+            
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .submit-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-form button:hover {
+            background-color: #c997ab;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Period Health Resources</h1>
+        
+        <!-- Section 1: Period Basics -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <h3>Understanding What Periods are!</h3>
+                <!-- Local video for "Understanding What Periods are!" -->
+                <video controls>
+                    <source src="static\videos/periodss.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br>
+                <!-- Related blog link -->
+                <a href="https://en.wikipedia.org/wiki/Uterus" class="resource-link" target="_blank">Read the full article on Menstrual Cycle Basics</a>
+            </div>
+        </div>
+
+        <!-- Section 2: Period Products -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <h3>Female Reproductive Body Part</h3>
+                <!-- Local video for "How to Use a Menstrual Cup" -->
+                <video controls>
+                    <source src="static\videos/femalebody.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br>
+                <!-- Related blog link -->
+                <a href="https://my.clevelandclinic.org/health/body/22467-uterus" class="resource-link" target="_blank">Read the full article on Menstrual Cups</a>
+            </div>
+        </div>
+
+        <!-- Section 3: Period Health Tips -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <h3>Tips for Managing Period Cramps Naturally</h3>
+                <!-- Local video for "Tips for Managing Period Cramps" -->
+                <video controls>
+                    <source src="static/videos/periods.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br>
+                <!-- Related blog link -->
+                <a href="https://kidshealth.org/en/teens/menstruation.html" class="resource-link" target="_blank">Read the full article on Managing Period Cramps</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

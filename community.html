@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Chat with Doctors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #1a1a1a, #333, #1a1a1a);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 900px;
+      width: 100%;
+    }
+    .chat-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 65%;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    #chat-box {
+      width: 100%;
+      height: 300px;
+      overflow-y: scroll;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .doctor-list {
+      width: 30%;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .doctor {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
+    .doctor:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+    .doctor img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      font-size: 14px;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+    }
+    button {
+      width: 100%;
+      background-color: #FF758F;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #A4133C;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Community Chat with Doctors</h2>
+
+  <div class="container">
+    <!-- Chat Box -->
+    <div class="chat-container">
+      <div id="chat-box"></div>
+      <input type="text" id="message" placeholder="Type a message...">
+      <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- Doctor Profiles -->
+    <div class="doctor-list">
+      <h4>Available Doctors</h4>
+      <div class="doctor" onclick="askDoctor('Dr. Sarah - Gynecologist')">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Dr. Sarah">
+        <span>Dr. Sarah (Gynecologist)</span>
+      </div>
+      <div class="doctor" onclick="askDoctor('Dr. James - Endocrinologist')">
+        <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Dr. James">
+        <span>Dr. James (Endocrinologist)</span>
+      </div>
+      <div class="doctor" onclick="askDoctor('Dr. Aisha - Nutritionist')">
+        <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Dr. Aisha">
+        <span>Dr. Aisha (Nutritionist)</span>
+      </div>
+      <div class="doctor" onclick="askDoctor('Dr. Robert - Cardiologist')">
+        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Dr. Robert">
+        <span>Dr. Robert (Cardiologist)</span>
+      </div>
+      <div class="doctor" onclick="askDoctor('Dr. Emily - Dermatologist')">
+        <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Dr. Emily">
+        <span>Dr. Emily (Dermatologist)</span>
+      </div>
+      <div class="doctor" onclick="askDoctor('Dr. Michael - Psychologist')">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Dr. Michael">
+        <span>Dr. Michael (Psychologist)</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var socket = io("http://127.0.0.1:5000");
+
+    socket.on("connect", function() {
+        console.log("✅ Connected to WebSocket");
+    });
+
+    socket.on("connect_error", function(error) {
+        console.error("❌ WebSocket Connection Failed:", error);
+    });
+
+    socket.on("message", function(msg) { 
+        let chatBox = document.getElementById("chat-box");
+        chatBox.innerHTML += `<p>${msg}</p>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+    });
+
+    function sendMessage() {
+        let message = document.getElementById("message").value;
+        if (message.trim() !== "") {
+            socket.send(message);
+            document.getElementById("message").value = "";
+        }
+    }
+
+    function askDoctor(doctorName) {
+        let message = `I need help from ${doctorName}`;
+        socket.send(message);
+    }
+  </script>
+
+</body>
+</html>
